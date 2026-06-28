@@ -5,4 +5,5 @@ COPY . /app
 # 安装依赖
 RUN pip install --no-cache-dir fastapi uvicorn websockets python-multipart pydantic python-dotenv
 # shell方式解析PORT环境变量
-CMD sh -c "uvicorn main:app --host 0.0.0.0 --port \$PORT"
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
